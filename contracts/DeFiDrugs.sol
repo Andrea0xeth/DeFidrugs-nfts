@@ -40,6 +40,11 @@ contract DeFiDrugs is ERC721 {
       //We can also add a console.log to help us see when the NFT is minted and to who!
       //This is how your tokenURI function should look now. _exists is a built in function to to verify if the tokenId exists in a contract. You can learn more about it here
     console.log("An NFT w/ ID %s has been minted to %s", _tokenId, msg.sender);
-    return "https://jsonkeeper.com/b/VHDJ";
-  }
+    return string(
+          abi.encodePacked(
+        "data:application/json;base64,",
+        "ewogICAgIm5hbWUiOiAiRGVGaURydWdzIiwKICAgICJkZXNjcmlwdGlvbiI6ICJVbmEgYm90dGlnbGlhIHBpZW5hIGRpIHByb3RvY29sbGkgY2hlIGNpIHNiYWxsYW5vIGRhIG1vcmlyZS4iLAogICAgImltYWdlIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIQnlaWE5sY25abFFYTndaV04wVW1GMGFXODlJbmhOYVc1WlRXbHVJRzFsWlhRaUlIWnBaWGRDYjNnOUlqQWdNQ0F6TlRBZ016VXdJajRLSUNBZ0lEeHpkSGxzWlQ0dVltRnpaU0I3SUdacGJHdzZJSGRvYVhSbE95Qm1iMjUwTFdaaGJXbHNlVG9nYzJWeWFXWTdJR1p2Ym5RdGMybDZaVG9nTVRSd2VEc2dmVHd2YzNSNWJHVStDaUFnSUNBOGNtVmpkQ0IzYVdSMGFEMGlNVEF3SlNJZ2FHVnBaMmgwUFNJeE1EQWxJaUJtYVd4c1BTSmliR0ZqYXlJZ0x6NEtJQ0FnSUR4MFpYaDBJSGc5SWpVd0pTSWdlVDBpTlRBbElpQmpiR0Z6Y3owaVltRnpaU0lnWkc5dGFXNWhiblF0WW1GelpXeHBibVU5SW0xcFpHUnNaU0lnZEdWNGRDMWhibU5vYjNJOUltMXBaR1JzWlNJK1UwOU9UeUJFVWs5SFFWUlBJRVJKSUVSRlJrazhMM1JsZUhRK0Nqd3ZjM1puUGc9PSIKfQ=="
+        )
+    );
+    }
 }
