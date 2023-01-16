@@ -25,6 +25,8 @@ contract DeFiDrugs is ERC721URIStorage {
   string[] secondWords = ["SpaghettiVongole", "Carbonara", "Lasagna", "CacioPepe", "PiastacchioGuanciale", "Risotto"];
   string[] thirdWords = ["Pescespada", "Tonno", "Bistecca", "Broccoletti", "Hamburger", "Cotoletta"];
 
+  // evet for show on the front end the heppened minting.
+  event NewEpicNFTMinted(address sender, uint256 tokenId);
 
   // We need to pass the name of our NFTs token and its symbol.
   constructor() ERC721 ("DeFiDrugs", "DFMA") {
