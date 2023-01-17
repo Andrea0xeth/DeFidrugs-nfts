@@ -103,5 +103,8 @@ contract DeFiDrugs is ERC721URIStorage {
   
     _tokenIds.increment();
     console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
+        
+    // EMIT MAGICAL EVENTS.
+    emit NewEpicNFTMinted(msg.sender, newItemId);
   }
 }
