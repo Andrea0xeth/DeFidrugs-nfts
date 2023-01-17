@@ -15,5 +15,8 @@ npx hardhat run scripts/deploy.js
 ```Deploy Smart contract Goerly : 
 npx hardhat run scripts/deploy.js --network goerli
 
+npm i -D @nomiclabs/hardhat-etherscan
+
+
 
 # DeFidrugs-nfts

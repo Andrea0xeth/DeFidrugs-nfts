@@ -1,5 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
+require("@nomiclabs/hardhat-etherscan");
+
 
 module.exports = {
   solidity: '0.8.17',
@@ -9,4 +11,11 @@ module.exports = {
       accounts: [process.env.GOERLI_PRIVATE_KEY],
     },
   },
+
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: "NDWTQGQ79WJIJBAQCTSPXT9DUESV9B26YF",
+  }
+
 };
